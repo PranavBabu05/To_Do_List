@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="To-Do.css">
+</head>
+<body>
+    
+    <center>
+        <h1 style="color: beige;">To-Do-List</h1>
+        
+        <div>
+            <input id="inputitem" placeholder="Enter your List">
+            <button id="updateitem">ADD</button>
+            <p id="task"></p>
+        </div>
+    </center>
+
+    <script>
+        
+
+        document.getElementById("updateitem").addEventListener("click",function(){
+            let inputitem=document.getElementById("inputitem").value
+            let task=document.getElementById("task")
+            let listitem=document.createElement("h2")
+            listitem.innerHTML=inputitem + `<button onclick='deleteitem(this)' id='response'>Work</button>`
+
+            task.appendChild(listitem)
+            document.getElementById("inputitem").value=""
+        })
+
+        function deleteitem(button)
+        {
+            button.parentElement.style.textDecoration="line-through"
+            button.textContent="Work Completed"
+        }
+
+
+    </script>
+
+</body>
+</html>

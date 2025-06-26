@@ -1,0 +1,32 @@
+body{
+    background-color: teal;
+}
+div{
+    border: 2px beige solid;
+    width: 600px;
+    padding: 30px;
+    border-radius: 30px;
+}
+input,button{
+    padding: 10px;
+}
+input{
+    width: 300px;
+    border-radius: 30px;
+    border: 2px black solid;
+}
+button{
+    width: 100px;
+    border-radius: 30px;
+    border: 2px black solid;
+}
+#task{
+    color: beige;
+    position: relative;
+    right: 100px;
+}
+#response{
+    position: fixed;
+    right: 600px;
+    width: 150px;
+}
